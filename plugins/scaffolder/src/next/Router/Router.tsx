@@ -16,7 +16,6 @@
 import React, { PropsWithChildren } from 'react';
 import { Routes, Route, useOutlet } from 'react-router';
 import { TemplateListPage } from '../TemplateListPage';
-import { SecretsContextProvider } from '../TemplateWizardPage/SecretsContext';
 import { TemplateWizardPage } from '../TemplateWizardPage';
 import {
   FieldExtensionOptions,
@@ -28,6 +27,7 @@ import {
 import { useElementFilter } from '@backstage/core-plugin-api';
 import { TemplateEntityV1beta3 } from '@backstage/plugin-scaffolder-common';
 import { TemplateGroupFilter } from '../TemplateListPage/TemplateGroups';
+import { SecretsContextProvider } from '../../components/secrets/SecretsContext';
 
 /**
  * The Props for the Scaffolder Router
