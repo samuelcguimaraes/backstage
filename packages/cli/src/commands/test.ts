@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { Command } from 'commander';
+import { Command, OptionValues } from 'commander';
 import { paths } from '../lib/paths';
 import { runCheck } from '../lib/run';
 
@@ -27,7 +27,7 @@ function includesAnyOf(hayStack: string[], ...needles: string[]) {
   return false;
 }
 
-export default async (cmd: Command) => {
+export default async (opts: OptionValues, cmd: Command) => {
   // all args are forwarded to jest
   let parent = cmd;
   while (parent.parent) {
